@@ -1,3 +1,4 @@
+
 <h1>Welcome!</h1>
 
 
@@ -30,7 +31,7 @@
     </li>
     <li>Create new folder <code>/views/posts</code></li>
     <li>Create new file <code>/views/posts/posts_view</code></li>
-    <li>Place content to that file. You could <code>&lt;?php var_dump($post)?></code> for starters.</li>
+    <li>Place content to that file. You could <code>&lt;<?php var_dump($post)?></code> for starters.</li>
 </ol>
 
 <h3>Sending data to server</h3>
@@ -43,8 +44,7 @@ Fill the name field below and click <i>submit form using ajax</i>.
 <a onclick="error()">Submit form using ajax (error)</a><br/>
 
 The form containing the name field will be submitted to the
-server by jQuery and server's response will be written to the box below.
-
+server by jQuery and server's response will be written to the box below
 <div class="well result"></div>
 
 
@@ -72,3 +72,4 @@ server by jQuery and server's response will be written to the box below.
         });
     }
 </script>
+

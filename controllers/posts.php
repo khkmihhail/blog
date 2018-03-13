@@ -13,6 +13,7 @@ class posts extends Controller
     {
 
         $this->users = get_all("SELECT * FROM users");
+        $this->posts = get_all("SELECT * FROM post");
     }
 
     /**
@@ -50,5 +51,10 @@ class posts extends Controller
     {
         echo "\$_POST:<br>";
         var_dump($_POST);
+    }
+
+    function view(){
+        $post_id = $this->params[0];
+        $this->post = get_one('select * from post NATURAL JOIN USER WHERE post_id='$post_id'');
     }
 }
