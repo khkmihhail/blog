@@ -12,7 +12,7 @@ class posts extends Controller
     function index()
     {
 
-        $this->users = get_all("SELECT * FROM users");
+//        $this->users = get_all("SELECT * FROM users");
         $this->posts = get_all("SELECT * FROM post");
     }
 
@@ -55,6 +55,6 @@ class posts extends Controller
 
     function view(){
         $post_id = $this->params[0];
-        $this->post = get_one('select * from post NATURAL JOIN USER WHERE post_id='$post_id'');
+        $this->post = get_one("select * from post NATURAL JOIN user WHERE post_id='$post_id'");
     }
 }
