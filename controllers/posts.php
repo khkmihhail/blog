@@ -12,8 +12,17 @@ class posts extends Controller
     function index()
     {
 
-//        $this->users = get_all("SELECT * FROM users");
+        $this->users = get_all("SELECT * FROM users");
         $this->posts = get_all("SELECT * FROM post");
+        //$this->post_id = get_first("select * from post NATURAL JOIN users WHERE post_id='$post_id'");
+        var_dump($_POST);
+    }
+
+
+    function view(){
+        $post_id = $this->params[0];
+        //$this->post_id = $_post_id;
+        $this->post = get_first("select * from post NATURAL JOIN users WHERE post_id='$post_id'");
     }
 
     /**
@@ -53,8 +62,5 @@ class posts extends Controller
         var_dump($_POST);
     }
 
-    function view(){
-        $post_id = $this->params[0];
-        $this->post = get_one("select * from post NATURAL JOIN user WHERE post_id='$post_id'");
-    }
+
 }

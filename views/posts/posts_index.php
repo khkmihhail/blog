@@ -4,6 +4,7 @@
         <a href="<?=BASE_URL?>posts/view/<?=$post['post_id']?>">
             <h1><?=$post['post_subject']?></h1>
         </a>
+        <?var_dump($post_id);?>
         <p><?=$post['post_text']?></p>
         <div>
             <span class="label label-default"><?=$post['user_id']?></span>
