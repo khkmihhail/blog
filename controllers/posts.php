@@ -23,6 +23,8 @@ class posts extends Controller
         $post_id = $this->params[0];
         //$this->post_id = $_post_id;
         $this->post = get_first("select * from post NATURAL JOIN users WHERE post_id='$post_id'");
+        $this->tags = get_all("select * from posts_tags
+NATURAL JOIN tags WHERE post_id='$post_id'");
     }
 
     /**
