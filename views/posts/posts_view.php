@@ -3,7 +3,6 @@
     <?foreach($posts as $post):?>
     <div class="col-md-12">
             <h1><?=$post['post_subject']?></h1>
-        <p><?=$post['post_text']?></p>
         <div>
             <span class="label label-default"><?=$post['user_id']?></span>
             <span class="badge">Posted <?=$post['post_created']?></span>

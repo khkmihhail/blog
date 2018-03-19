@@ -1,11 +1,10 @@
 <div class="container">
     <?foreach($posts as $post):?>
     <div class="col-md-12">
-        <a href="<?=BASE_URL?>posts/view/<?=$post['post_id']?>">
+        <a href="<?=BASE_URL?>comments/view/<?=$comments['post_comment']?>">
             <h1><?=$post['post_subject']?></h1>
         </a>
         <?var_dump($post_id);?>
-        <p><?=$post['post_text']?></p>
         <div>
             <span class="label label-default"><?=$post['user_id']?></span>
             <span class="badge">Posted <?=$post['post_created']?></span>
