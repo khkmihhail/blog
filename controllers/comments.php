@@ -19,10 +19,11 @@ class comments extends Controller
     }
 
     function view(){
-        $_comments = get_all("select * from comments NATURAL JOIN post");
+        $post_id = $this->params[0];
+        $this->_comments = get_first("select * from comments NATURAL JOIN post where post_id='$post_id'");
 
-        foreach ($_comments as $comment) {
+       /* foreach ($_comments as $comment) {
             $this->comments[$comment['post_id']][] = $comment['post_comment'];
-        };
+        };*/
     }
 }

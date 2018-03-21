@@ -1,11 +1,17 @@
 <div class="container">
-    <?var_dump($post_id);?>
-    <?foreach($posts as $post):?>
     <div class="col-md-12">
             <h1><?=$post['post_subject']?></h1>
         <div>
             <span class="label label-default"><?=$post['user_id']?></span>
             <span class="badge">Posted <?=$post['post_created']?></span>
+            <span>
+                <p>
+                    <?=$post['post_text']?>
+                </p>
+            </span>
+            <a href="<?=BASE_URL?>comments/<?=$post['post_id']?>">
+                Comments
+            </a>
             <div class="pull-right">
                 <span class="label label-primary">story</span>
                 <span class="label label-success">blog</span>
@@ -15,5 +21,4 @@
             </div>
          </div>
     </div>
-    <?endforeach?>
 </div>
